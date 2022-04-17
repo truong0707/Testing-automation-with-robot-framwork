@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220417 20:17:44.988" rpa="false" schemaversion="3">
+<suite id="s1" name="POM" source="C:\Users\TechCare\PycharmProjects\testing\TestCases\LoginTest__POM.robot">
+<test id="s1-t1" name="Login with wrong password" line="5">
+<kw name="open fado login page" library="LoginPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220417 20:17:45.446" level="INFO">Opening browser 'Chrome' to base url 'https://fado.vn/dang-nhap'.</msg>
+<status status="PASS" starttime="20220417 20:17:45.445" endtime="20220417 20:17:49.806"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220417 20:17:49.806" endtime="20220417 20:17:49.943"/>
+</kw>
+<status status="PASS" starttime="20220417 20:17:45.444" endtime="20220417 20:17:49.944"/>
+</kw>
+<kw name="enter username" library="LoginPage">
+<arg>truongnguyendep@gmail.com</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220417 20:17:49.945" level="INFO">Typing text 'truongnguyendep@gmail.com' into text field 'css=input#auth-block__form-group__email'.</msg>
+<status status="PASS" starttime="20220417 20:17:49.945" endtime="20220417 20:17:50.175"/>
+</kw>
+<status status="PASS" starttime="20220417 20:17:49.944" endtime="20220417 20:17:50.175"/>
+</kw>
+<kw name="enter password" library="LoginPage">
+<arg>123456</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220417 20:17:50.179" level="INFO">Typing text '123456' into text field 'css=input[data-test-login-password]'.</msg>
+<status status="PASS" starttime="20220417 20:17:50.178" endtime="20220417 20:17:50.307"/>
+</kw>
+<status status="PASS" starttime="20220417 20:17:50.176" endtime="20220417 20:17:50.308"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Đăng nhập</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220417 20:17:50.309" level="INFO">Clicking button 'Đăng nhập'.</msg>
+<status status="PASS" starttime="20220417 20:17:50.308" endtime="20220417 20:17:50.419"/>
+</kw>
+<kw name="verify Error text" library="LoginPage">
+<arg>Có lỗi xảy ra:\n- Mật khẩu không đúng, vui lòng kiểm tra lại</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lbError}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220417 20:17:50.421" endtime="20220417 20:17:51.194"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${lbError}</arg>
+<arg>${error}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220417 20:17:51.195" level="INFO">Verifying element 'css=div.-alert-danger' contains exact text 'Có lỗi xảy ra:
+- Mật khẩu không đúng, vui lòng kiểm tra lại'.</msg>
+<status status="PASS" starttime="20220417 20:17:51.194" endtime="20220417 20:17:51.223"/>
+</kw>
+<status status="PASS" starttime="20220417 20:17:50.420" endtime="20220417 20:17:51.223"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220417 20:17:51.224" endtime="20220417 20:17:53.680"/>
+</kw>
+<status status="PASS" starttime="20220417 20:17:45.442" endtime="20220417 20:17:53.681"/>
+</test>
+<test id="s1-t2" name="Login with not exists username" line="15">
+<kw name="open fado login page" library="LoginPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220417 20:17:53.684" level="INFO">Opening browser 'Chrome' to base url 'https://fado.vn/dang-nhap'.</msg>
+<status status="PASS" starttime="20220417 20:17:53.684" endtime="20220417 20:17:57.200"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220417 20:17:57.200" endtime="20220417 20:17:57.425"/>
+</kw>
+<status status="PASS" starttime="20220417 20:17:53.683" endtime="20220417 20:17:57.425"/>
+</kw>
+<kw name="enter username" library="LoginPage">
+<arg>truongga123@gmail.com</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220417 20:17:57.441" level="INFO">Typing text 'truongga123@gmail.com' into text field 'css=input#auth-block__form-group__email'.</msg>
+<status status="PASS" starttime="20220417 20:17:57.440" endtime="20220417 20:17:58.087"/>
+</kw>
+<status status="PASS" starttime="20220417 20:17:57.439" endtime="20220417 20:17:58.088"/>
+</kw>
+<kw name="enter password" library="LoginPage">
+<arg>truong19062001</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220417 20:17:58.092" level="INFO">Typing text 'truong19062001' into text field 'css=input[data-test-login-password]'.</msg>
+<status status="PASS" starttime="20220417 20:17:58.091" endtime="20220417 20:17:58.254"/>
+</kw>
+<status status="PASS" starttime="20220417 20:17:58.089" endtime="20220417 20:17:58.254"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Đăng nhập</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220417 20:17:58.255" level="INFO">Clicking button 'Đăng nhập'.</msg>
+<status status="PASS" starttime="20220417 20:17:58.255" endtime="20220417 20:17:58.368"/>
+</kw>
+<kw name="verify Error text" library="LoginPage">
+<arg>Có lỗi xảy ra:\n- Tài khoản không tồn tại, vui lòng kiểm tra lại</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lbError}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220417 20:17:58.370" endtime="20220417 20:17:58.890"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${lbError}</arg>
+<arg>${error}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220417 20:17:58.892" level="INFO">Verifying element 'css=div.-alert-danger' contains exact text 'Có lỗi xảy ra:
+- Tài khoản không tồn tại, vui lòng kiểm tra lại'.</msg>
+<status status="PASS" starttime="20220417 20:17:58.890" endtime="20220417 20:17:58.926"/>
+</kw>
+<status status="PASS" starttime="20220417 20:17:58.369" endtime="20220417 20:17:58.926"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220417 20:17:58.927" endtime="20220417 20:18:01.337"/>
+</kw>
+<status status="PASS" starttime="20220417 20:17:53.682" endtime="20220417 20:18:01.337"/>
+</test>
+<status status="PASS" starttime="20220417 20:17:44.992" endtime="20220417 20:18:01.340"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="POM">POM</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
