@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220425 21:58:54.554" rpa="false" schemaversion="3">
+<suite id="s1" name="POM" source="C:\Users\TechCare\PycharmProjects\testing\TestCases\LoginTest__POM.robot">
+<test id="s1-t1" name="Login with wrong password" line="36">
+<kw name="Get Data Test By Data Key" library="DataTest">
+<var>${username}</var>
+<arg>username</arg>
+<msg timestamp="20220425 21:58:55.009" level="INFO">${username} = truongnguyendep@gmail.com</msg>
+<status status="PASS" starttime="20220425 21:58:55.008" endtime="20220425 21:58:55.009"/>
+</kw>
+<kw name="Get Data Test By Data Key" library="DataTest">
+<var>${password}</var>
+<arg>password</arg>
+<msg timestamp="20220425 21:58:55.011" level="INFO">${password} = 123456</msg>
+<status status="PASS" starttime="20220425 21:58:55.010" endtime="20220425 21:58:55.011"/>
+</kw>
+<kw name="open page" library="LoginPage">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220425 21:58:55.012" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
+<status status="PASS" starttime="20220425 21:58:55.011" endtime="20220425 21:59:00.625"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220425 21:59:00.626" endtime="20220425 21:59:00.767"/>
+</kw>
+<status status="PASS" starttime="20220425 21:58:55.011" endtime="20220425 21:59:00.767"/>
+</kw>
+<kw name="open tab user" library="LoginPage">
+<arg>user</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${btnOpenTabUser}</arg>
+<arg>${tabuser}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220425 21:59:00.776" level="INFO">Sending key(s) ('user',) to css=span.icon1 element.</msg>
+<msg timestamp="20220425 21:59:01.214" level="INFO">Sending keys user</msg>
+<status status="PASS" starttime="20220425 21:59:00.774" endtime="20220425 21:59:01.254"/>
+</kw>
+<status status="PASS" starttime="20220425 21:59:00.773" endtime="20220425 21:59:01.254"/>
+</kw>
+<kw name="navigateLoginPage" library="LoginPage">
+<arg>Đăng Nhập</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${btnNavigate}</arg>
+<arg>${navigatelogin}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220425 21:59:01.257" level="INFO">Sending key(s) ('Đăng Nhập',) to //*[@id="vnt-header"]/div[1]/div[3]/div[2]/div[2]/div[1]/ul/li[1]/a element.</msg>
+<msg timestamp="20220425 21:59:02.388" level="INFO">Sending keys Đăng Nhập</msg>
+<status status="PASS" starttime="20220425 21:59:01.256" endtime="20220425 21:59:02.415"/>
+</kw>
+<status status="PASS" starttime="20220425 21:59:01.255" endtime="20220425 21:59:02.415"/>
+</kw>
+<kw name="enter username" library="LoginPage">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220425 21:59:02.417" level="INFO">Typing text 'truongnguyendep@gmail.com' into text field '//*[@id="login_user"]'.</msg>
+<status status="PASS" starttime="20220425 21:59:02.417" endtime="20220425 21:59:02.739"/>
+</kw>
+<status status="PASS" starttime="20220425 21:59:02.416" endtime="20220425 21:59:02.740"/>
+</kw>
+<kw name="enter password" library="LoginPage">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220425 21:59:02.742" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220425 21:59:02.741" endtime="20220425 21:59:02.900"/>
+</kw>
+<status status="PASS" starttime="20220425 21:59:02.741" endtime="20220425 21:59:02.901"/>
+</kw>
+<status status="PASS" starttime="20220425 21:58:55.006" endtime="20220425 21:59:02.902"/>
+</test>
+<status status="PASS" starttime="20220425 21:58:54.558" endtime="20220425 21:59:02.906"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="POM">POM</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

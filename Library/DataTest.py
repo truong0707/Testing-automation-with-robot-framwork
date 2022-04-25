@@ -10,3 +10,4 @@ class DataTest:
         return p.get(dataKey).data
 
 print(DataTest.get_data_test_by_data_key("username"))
+print(DataTest.get_data_test_by_data_key("password"))
