@@ -12,8 +12,7 @@ ${lbError}      css=div.-alert-danger
 *** Keywords ***
 open fado login page
     open browser  ${url}  Chrome
-    # phóng to trình duyệt
-    maximize browser window
+    maximize browser window     # phóng to trình duyệt
 
 enter username
     # locater input + text mình muốn nhập

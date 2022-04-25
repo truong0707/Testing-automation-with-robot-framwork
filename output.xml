@@ -1,90 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220425 14:07:18.157" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220425 16:46:25.006" rpa="false" schemaversion="3">
 <suite id="s1" name="POM" source="C:\Users\TechCare\PycharmProjects\testing\TestCases\LoginTest__POM.robot">
-<test id="s1-t1" name="Login with wrong password" line="5">
+<test id="s1-t1" name="Login with wrong password" line="11">
+<kw name="get_data_test_by_data_key">
+<var>${username}</var>
+<arg>username</arg>
+<msg timestamp="20220425 16:46:25.556" level="FAIL">No keyword with name 'get_data_test_by_data_key' found.</msg>
+<status status="FAIL" starttime="20220425 16:46:25.556" endtime="20220425 16:46:25.556"/>
+</kw>
+<kw name="get_data_test_by_data_key">
+<var>${password}</var>
+<arg>password</arg>
+<status status="NOT RUN" starttime="20220425 16:46:25.563" endtime="20220425 16:46:25.563"/>
+</kw>
 <kw name="open fado login page" library="LoginPage">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220425 14:07:18.668" level="INFO">Opening browser 'Chrome' to base url 'https://fado.vn/dang-nhap'.</msg>
-<status status="PASS" starttime="20220425 14:07:18.668" endtime="20220425 14:07:24.708"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220425 14:07:24.709" endtime="20220425 14:07:24.834"/>
-</kw>
-<status status="PASS" starttime="20220425 14:07:18.667" endtime="20220425 14:07:24.834"/>
+<status status="NOT RUN" starttime="20220425 16:46:25.563" endtime="20220425 16:46:25.563"/>
 </kw>
 <kw name="enter username" library="LoginPage">
-<arg>truongnguyendep@gmail.com</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txtUsername}</arg>
 <arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220425 14:07:24.836" level="INFO">Typing text 'truongnguyendep@gmail.com' into text field 'css=input#auth-block__form-group__email'.</msg>
-<status status="PASS" starttime="20220425 14:07:24.835" endtime="20220425 14:07:25.089"/>
-</kw>
-<status status="PASS" starttime="20220425 14:07:24.835" endtime="20220425 14:07:25.090"/>
+<status status="NOT RUN" starttime="20220425 16:46:25.564" endtime="20220425 16:46:25.564"/>
 </kw>
 <kw name="enter password" library="LoginPage">
-<arg>123456</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txtPassword}</arg>
 <arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220425 14:07:25.092" level="INFO">Typing text '123456' into text field 'css=input[data-test-login-password]'.</msg>
-<status status="PASS" starttime="20220425 14:07:25.091" endtime="20220425 14:07:25.260"/>
-</kw>
-<status status="PASS" starttime="20220425 14:07:25.090" endtime="20220425 14:07:25.261"/>
+<status status="NOT RUN" starttime="20220425 16:46:25.564" endtime="20220425 16:46:25.564"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Đăng nhập</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220425 14:07:25.262" level="INFO">Clicking button 'Đăng nhập'.</msg>
-<status status="PASS" starttime="20220425 14:07:25.261" endtime="20220425 14:07:25.568"/>
+<status status="NOT RUN" starttime="20220425 16:46:25.565" endtime="20220425 16:46:25.565"/>
 </kw>
 <kw name="verify Error text" library="LoginPage">
-<arg>Có lỗi xảy ra:\n- Mật khẩu không đúng, vui lòng kiểm tra lại</arg>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${lbError}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220425 14:07:25.572" endtime="20220425 14:07:26.540"/>
+<arg>${errormsg}</arg>
+<status status="NOT RUN" starttime="20220425 16:46:25.565" endtime="20220425 16:46:25.565"/>
 </kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>${lbError}</arg>
-<arg>${error}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20220425 14:07:26.541" level="INFO">Verifying element 'css=div.-alert-danger' contains exact text 'Có lỗi xảy ra:
-- Mật khẩu không đúng, vui lòng kiểm tra lại'.</msg>
-<status status="PASS" starttime="20220425 14:07:26.540" endtime="20220425 14:07:26.575"/>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220425 16:46:25.566" endtime="20220425 16:46:25.567"/>
 </kw>
-<status status="PASS" starttime="20220425 14:07:25.571" endtime="20220425 14:07:26.575"/>
-</kw>
-<kw name="clos browser" type="TEARDOWN">
-<msg timestamp="20220425 14:07:26.581" level="FAIL">No keyword with name 'clos browser' found. Did you mean:
-    SeleniumLibrary.Close Browser</msg>
-<status status="FAIL" starttime="20220425 14:07:26.581" endtime="20220425 14:07:26.581">No keyword with name 'clos browser' found. Did you mean:
-    SeleniumLibrary.Close Browser</status>
-</kw>
-<status status="FAIL" starttime="20220425 14:07:18.666" endtime="20220425 14:07:26.582">Teardown failed:
-No keyword with name 'clos browser' found. Did you mean:
-    SeleniumLibrary.Close Browser</status>
+<status status="FAIL" starttime="20220425 16:46:25.549" endtime="20220425 16:46:25.567">No keyword with name 'get_data_test_by_data_key' found.</status>
 </test>
-<test id="s1-t2" name="Login with not exists username" line="15">
+<test id="s1-t2" name="Login with not exists username" line="23">
 <kw name="open fado login page" library="LoginPage">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220425 14:07:26.588" level="INFO">Opening browser 'Chrome' to base url 'https://fado.vn/dang-nhap'.</msg>
-<status status="PASS" starttime="20220425 14:07:26.587" endtime="20220425 14:07:30.544"/>
+<msg timestamp="20220425 16:46:25.573" level="INFO">Opening browser 'Chrome' to base url 'https://fado.vn/dang-nhap'.</msg>
+<status status="PASS" starttime="20220425 16:46:25.571" endtime="20220425 16:46:30.846"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220425 14:07:30.545" endtime="20220425 14:07:30.911"/>
+<status status="PASS" starttime="20220425 16:46:30.846" endtime="20220425 16:46:30.973"/>
 </kw>
-<status status="PASS" starttime="20220425 14:07:26.586" endtime="20220425 14:07:30.912"/>
+<status status="PASS" starttime="20220425 16:46:25.570" endtime="20220425 16:46:30.973"/>
 </kw>
 <kw name="enter username" library="LoginPage">
 <arg>truongga123@gmail.com</arg>
@@ -92,10 +60,10 @@ No keyword with name 'clos browser' found. Did you mean:
 <arg>${txtUsername}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220425 14:07:30.917" level="INFO">Typing text 'truongga123@gmail.com' into text field 'css=input#auth-block__form-group__email'.</msg>
-<status status="PASS" starttime="20220425 14:07:30.916" endtime="20220425 14:07:31.579"/>
+<msg timestamp="20220425 16:46:30.975" level="INFO">Typing text 'truongga123@gmail.com' into text field 'css=input#auth-block__form-group__email'.</msg>
+<status status="PASS" starttime="20220425 16:46:30.974" endtime="20220425 16:46:31.186"/>
 </kw>
-<status status="PASS" starttime="20220425 14:07:30.915" endtime="20220425 14:07:31.580"/>
+<status status="PASS" starttime="20220425 16:46:30.974" endtime="20220425 16:46:31.186"/>
 </kw>
 <kw name="enter password" library="LoginPage">
 <arg>truong19062001</arg>
@@ -103,41 +71,41 @@ No keyword with name 'clos browser' found. Did you mean:
 <arg>${txtPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220425 14:07:31.586" level="INFO">Typing text 'truong19062001' into text field 'css=input[data-test-login-password]'.</msg>
-<status status="PASS" starttime="20220425 14:07:31.585" endtime="20220425 14:07:31.834"/>
+<msg timestamp="20220425 16:46:31.189" level="INFO">Typing text 'truong19062001' into text field 'css=input[data-test-login-password]'.</msg>
+<status status="PASS" starttime="20220425 16:46:31.188" endtime="20220425 16:46:31.340"/>
 </kw>
-<status status="PASS" starttime="20220425 14:07:31.584" endtime="20220425 14:07:31.835"/>
+<status status="PASS" starttime="20220425 16:46:31.187" endtime="20220425 16:46:31.340"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>Đăng nhập</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220425 14:07:31.836" level="INFO">Clicking button 'Đăng nhập'.</msg>
-<status status="PASS" starttime="20220425 14:07:31.835" endtime="20220425 14:07:32.019"/>
+<msg timestamp="20220425 16:46:31.341" level="INFO">Clicking button 'Đăng nhập'.</msg>
+<status status="PASS" starttime="20220425 16:46:31.340" endtime="20220425 16:46:31.451"/>
 </kw>
 <kw name="verify Error text" library="LoginPage">
 <arg>Có lỗi xảy ra:\n- Tài khoản không tồn tại, vui lòng kiểm tra lại</arg>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${lbError}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220425 14:07:32.021" endtime="20220425 14:07:32.506"/>
+<status status="PASS" starttime="20220425 16:46:31.453" endtime="20220425 16:46:31.817"/>
 </kw>
 <kw name="Element Text Should Be" library="SeleniumLibrary">
 <arg>${lbError}</arg>
 <arg>${error}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20220425 14:07:32.506" level="INFO">Verifying element 'css=div.-alert-danger' contains exact text 'Có lỗi xảy ra:
+<msg timestamp="20220425 16:46:31.819" level="INFO">Verifying element 'css=div.-alert-danger' contains exact text 'Có lỗi xảy ra:
 - Tài khoản không tồn tại, vui lòng kiểm tra lại'.</msg>
-<status status="PASS" starttime="20220425 14:07:32.506" endtime="20220425 14:07:32.547"/>
+<status status="PASS" starttime="20220425 16:46:31.818" endtime="20220425 16:46:31.857"/>
 </kw>
-<status status="PASS" starttime="20220425 14:07:32.020" endtime="20220425 14:07:32.547"/>
+<status status="PASS" starttime="20220425 16:46:31.452" endtime="20220425 16:46:31.857"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220425 14:07:32.548" endtime="20220425 14:07:35.088"/>
+<status status="PASS" starttime="20220425 16:46:31.858" endtime="20220425 16:46:34.209"/>
 </kw>
-<status status="PASS" starttime="20220425 14:07:26.585" endtime="20220425 14:07:35.089"/>
+<status status="PASS" starttime="20220425 16:46:25.569" endtime="20220425 16:46:34.210"/>
 </test>
-<status status="FAIL" starttime="20220425 14:07:18.160" endtime="20220425 14:07:35.092"/>
+<status status="FAIL" starttime="20220425 16:46:25.009" endtime="20220425 16:46:34.213"/>
 </suite>
 <statistics>
 <total>
@@ -150,5 +118,16 @@ No keyword with name 'clos browser' found. Did you mean:
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220425 16:46:25.544" level="ERROR">Error in file 'C:\Users\TechCare\PycharmProjects\testing\TestCases\LoginTest__POM.robot' on line 3: Importing library '../Library/TestData' failed: ModuleNotFoundError: No module named '.'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\TechCare\PycharmProjects\testing\venv\Scripts\robot.exe
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39
+  C:\Users\TechCare\PycharmProjects\testing\venv
+  C:\Users\TechCare\PycharmProjects\testing\venv\lib\site-packages</msg>
 </errors>
 </robot>

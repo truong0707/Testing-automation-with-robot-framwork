@@ -1,13 +1,19 @@
 *** Settings ***
 Resource  ../PageObjects/LoginPage.robot
+Library   ../Library/TestData
+
+*** Variables ***
+${errormsg}=   Có lỗi xảy ra:\n- Mật khẩu không đúng, vui lòng kiểm tra lại
 
 *** Test Cases ***
 Login with wrong password
+   ${username}=   get_data_test_by_data_key   username
+   ${password}=   get_data_test_by_data_key   password
    open fado login page
-   enter username       truongnguyendep@gmail.com
-   enter password       123456
+   enter username       ${username}
+   enter password       ${password}
    click button         Đăng nhập
-   verify Error text    Có lỗi xảy ra:\n- Mật khẩu không đúng, vui lòng kiểm tra lại
+   verify Error text    ${errormsg}
 #   close trình duyệt
 #   [Teardown]  : có nghĩa là cho dù pass hay không pass thì vẫn đóng trình duyệt
    [Teardown]  close browser
