@@ -11,3 +11,5 @@ class DataTest:
 
 print(DataTest.get_data_test_by_data_key("usernamecorrect"))
 print(DataTest.get_data_test_by_data_key("passwordcorrect"))
+print(DataTest.get_data_test_by_data_key("usernamewrong"))
+print(DataTest.get_data_test_by_data_key("passwordwrong"))

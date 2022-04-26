@@ -1,44 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220426 07:41:20.907" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220426 07:57:53.403" rpa="false" schemaversion="3">
 <suite id="s1" name="POM" source="C:\Users\TechCare\PycharmProjects\testing\TestCases\LoginTest__POM.robot">
-<test id="s1-t1" name="Login with wrong password" line="36">
+<test id="s1-t1" name="Login with wrong password" line="7">
 <kw name="Get Data Test By Data Key" library="DataTest">
 <var>${username}</var>
 <arg>usernamecorrect</arg>
-<msg timestamp="20220426 07:41:21.396" level="INFO">${username} = truongnguyendep@gmail.com</msg>
-<status status="PASS" starttime="20220426 07:41:21.395" endtime="20220426 07:41:21.396"/>
+<msg timestamp="20220426 07:57:53.880" level="INFO">${username} = truongnguyendep@gmail.com</msg>
+<status status="PASS" starttime="20220426 07:57:53.879" endtime="20220426 07:57:53.880"/>
 </kw>
 <kw name="Get Data Test By Data Key" library="DataTest">
 <var>${password}</var>
 <arg>passwordcorrect</arg>
-<msg timestamp="20220426 07:41:21.398" level="INFO">${password} = 123456</msg>
-<status status="PASS" starttime="20220426 07:41:21.397" endtime="20220426 07:41:21.398"/>
-</kw>
-<kw name="Get Data Test By Data Key" library="DataTest">
-<var>${usernamewrong}</var>
-<arg>usernamewrong</arg>
-<msg timestamp="20220426 07:41:21.400" level="INFO">${usernamewrong} = truongnguyendep@gmail.com</msg>
-<status status="PASS" starttime="20220426 07:41:21.399" endtime="20220426 07:41:21.400"/>
-</kw>
-<kw name="Get Data Test By Data Key" library="DataTest">
-<var>${passwordwrong}</var>
-<arg>passwordwrong</arg>
-<msg timestamp="20220426 07:41:21.402" level="INFO">${passwordwrong} = truong19062001</msg>
-<status status="PASS" starttime="20220426 07:41:21.401" endtime="20220426 07:41:21.402"/>
+<msg timestamp="20220426 07:57:53.882" level="INFO">${password} = 123456</msg>
+<status status="PASS" starttime="20220426 07:57:53.881" endtime="20220426 07:57:53.882"/>
 </kw>
 <kw name="open page" library="LoginPage">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220426 07:41:21.403" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
-<status status="PASS" starttime="20220426 07:41:21.403" endtime="20220426 07:41:26.617"/>
+<msg timestamp="20220426 07:57:53.884" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
+<status status="PASS" starttime="20220426 07:57:53.883" endtime="20220426 07:57:59.045"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220426 07:41:26.617" endtime="20220426 07:41:26.776"/>
+<status status="PASS" starttime="20220426 07:57:59.045" endtime="20220426 07:57:59.210"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:21.402" endtime="20220426 07:41:26.776"/>
+<status status="PASS" starttime="20220426 07:57:53.883" endtime="20220426 07:57:59.210"/>
 </kw>
 <kw name="open tab user" library="LoginPage">
 <arg>user</arg>
@@ -46,11 +34,11 @@
 <arg>${btnOpenTabUser}</arg>
 <arg>${tabuser}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 07:41:26.786" level="INFO">Sending key(s) ('user',) to css=span.icon1 element.</msg>
-<msg timestamp="20220426 07:41:27.225" level="INFO">Sending keys user</msg>
-<status status="PASS" starttime="20220426 07:41:26.782" endtime="20220426 07:41:27.256"/>
+<msg timestamp="20220426 07:57:59.214" level="INFO">Sending key(s) ('user',) to css=span.icon1 element.</msg>
+<msg timestamp="20220426 07:57:59.630" level="INFO">Sending keys user</msg>
+<status status="PASS" starttime="20220426 07:57:59.212" endtime="20220426 07:57:59.648"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:26.780" endtime="20220426 07:41:27.257"/>
+<status status="PASS" starttime="20220426 07:57:59.211" endtime="20220426 07:57:59.649"/>
 </kw>
 <kw name="navigateLoginPage" library="LoginPage">
 <arg>Đăng Nhập</arg>
@@ -58,11 +46,11 @@
 <arg>${btnNavigate}</arg>
 <arg>${navigatelogin}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 07:41:27.259" level="INFO">Sending key(s) ('Đăng Nhập',) to //*[@id="vnt-header"]/div[1]/div[3]/div[2]/div[2]/div[1]/ul/li[1]/a element.</msg>
-<msg timestamp="20220426 07:41:28.304" level="INFO">Sending keys Đăng Nhập</msg>
-<status status="PASS" starttime="20220426 07:41:27.258" endtime="20220426 07:41:28.348"/>
+<msg timestamp="20220426 07:57:59.653" level="INFO">Sending key(s) ('Đăng Nhập',) to //*[@id="vnt-header"]/div[1]/div[3]/div[2]/div[2]/div[1]/ul/li[1]/a element.</msg>
+<msg timestamp="20220426 07:58:00.838" level="INFO">Sending keys Đăng Nhập</msg>
+<status status="PASS" starttime="20220426 07:57:59.650" endtime="20220426 07:58:00.867"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:27.257" endtime="20220426 07:41:28.349"/>
+<status status="PASS" starttime="20220426 07:57:59.649" endtime="20220426 07:58:00.867"/>
 </kw>
 <kw name="enter username" library="LoginPage">
 <arg>${username}</arg>
@@ -70,10 +58,10 @@
 <arg>${txtUsername}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220426 07:41:28.352" level="INFO">Typing text 'truongnguyendep@gmail.com' into text field '//*[@id="login_user"]'.</msg>
-<status status="PASS" starttime="20220426 07:41:28.351" endtime="20220426 07:41:28.569"/>
+<msg timestamp="20220426 07:58:00.871" level="INFO">Typing text 'truongnguyendep@gmail.com' into text field '//*[@id="login_user"]'.</msg>
+<status status="PASS" starttime="20220426 07:58:00.869" endtime="20220426 07:58:01.193"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:28.350" endtime="20220426 07:41:28.570"/>
+<status status="PASS" starttime="20220426 07:58:00.868" endtime="20220426 07:58:01.193"/>
 </kw>
 <kw name="enter password" library="LoginPage">
 <arg>${password}</arg>
@@ -81,10 +69,10 @@
 <arg>${txtPassword}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220426 07:41:28.574" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220426 07:41:28.573" endtime="20220426 07:41:28.787"/>
+<msg timestamp="20220426 07:58:01.196" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220426 07:58:01.195" endtime="20220426 07:58:01.390"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:28.572" endtime="20220426 07:41:28.787"/>
+<status status="PASS" starttime="20220426 07:58:01.194" endtime="20220426 07:58:01.391"/>
 </kw>
 <kw name="clickLoginButton" library="LoginPage">
 <arg>ĐĂNG NHẬP</arg>
@@ -92,40 +80,52 @@
 <arg>${btnLogin}</arg>
 <arg>${logintext}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 07:41:28.789" level="INFO">Sending key(s) ('ĐĂNG NHẬP',) to //*[@id="frmLogin"]/div[4]/button element.</msg>
-<msg timestamp="20220426 07:41:30.122" level="INFO">Sending keys ĐĂNG NHẬP</msg>
-<status status="PASS" starttime="20220426 07:41:28.788" endtime="20220426 07:41:30.174"/>
+<msg timestamp="20220426 07:58:01.393" level="INFO">Sending key(s) ('ĐĂNG NHẬP',) to //*[@id="frmLogin"]/div[4]/button element.</msg>
+<msg timestamp="20220426 07:58:02.617" level="INFO">Sending keys ĐĂNG NHẬP</msg>
+<status status="PASS" starttime="20220426 07:58:01.392" endtime="20220426 07:58:02.650"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:28.788" endtime="20220426 07:41:30.175"/>
+<status status="PASS" starttime="20220426 07:58:01.391" endtime="20220426 07:58:02.650"/>
 </kw>
 <kw name="verify Error text" library="LoginPage">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${errortext}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220426 07:41:30.176" endtime="20220426 07:41:30.224"/>
+<status status="PASS" starttime="20220426 07:58:02.652" endtime="20220426 07:58:02.738"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:30.175" endtime="20220426 07:41:30.225"/>
+<status status="PASS" starttime="20220426 07:58:02.651" endtime="20220426 07:58:02.739"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220426 07:41:30.227" endtime="20220426 07:41:32.587"/>
+<status status="PASS" starttime="20220426 07:58:02.741" endtime="20220426 07:58:05.125"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:21.393" endtime="20220426 07:41:32.588"/>
+<status status="PASS" starttime="20220426 07:57:53.878" endtime="20220426 07:58:05.126"/>
 </test>
-<test id="s1-t2" name="Logged in successfully" line="51">
+<test id="s1-t2" name="Logged in successfully" line="20">
+<kw name="Get Data Test By Data Key" library="DataTest">
+<var>${usernamewrong}</var>
+<arg>usernamewrong</arg>
+<msg timestamp="20220426 07:58:05.138" level="INFO">${usernamewrong} = truongnguyendep@gmail.com</msg>
+<status status="PASS" starttime="20220426 07:58:05.133" endtime="20220426 07:58:05.138"/>
+</kw>
+<kw name="Get Data Test By Data Key" library="DataTest">
+<var>${passwordwrong}</var>
+<arg>passwordwrong</arg>
+<msg timestamp="20220426 07:58:05.142" level="INFO">${passwordwrong} = Truong19062001</msg>
+<status status="PASS" starttime="20220426 07:58:05.139" endtime="20220426 07:58:05.143"/>
+</kw>
 <kw name="open page" library="LoginPage">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220426 07:41:32.599" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
-<status status="PASS" starttime="20220426 07:41:32.598" endtime="20220426 07:41:37.541"/>
+<msg timestamp="20220426 07:58:05.146" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
+<status status="PASS" starttime="20220426 07:58:05.145" endtime="20220426 07:58:10.162"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220426 07:41:37.541" endtime="20220426 07:41:37.824"/>
+<status status="PASS" starttime="20220426 07:58:10.163" endtime="20220426 07:58:10.310"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:32.597" endtime="20220426 07:41:37.824"/>
+<status status="PASS" starttime="20220426 07:58:05.144" endtime="20220426 07:58:10.311"/>
 </kw>
 <kw name="open tab user" library="LoginPage">
 <arg>user</arg>
@@ -133,11 +133,11 @@
 <arg>${btnOpenTabUser}</arg>
 <arg>${tabuser}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 07:41:37.833" level="INFO">Sending key(s) ('user',) to css=span.icon1 element.</msg>
-<msg timestamp="20220426 07:41:38.319" level="INFO">Sending keys user</msg>
-<status status="PASS" starttime="20220426 07:41:37.831" endtime="20220426 07:41:38.339"/>
+<msg timestamp="20220426 07:58:10.319" level="INFO">Sending key(s) ('user',) to css=span.icon1 element.</msg>
+<msg timestamp="20220426 07:58:10.742" level="INFO">Sending keys user</msg>
+<status status="PASS" starttime="20220426 07:58:10.317" endtime="20220426 07:58:10.771"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:37.828" endtime="20220426 07:41:38.339"/>
+<status status="PASS" starttime="20220426 07:58:10.316" endtime="20220426 07:58:10.772"/>
 </kw>
 <kw name="navigateLoginPage" library="LoginPage">
 <arg>Đăng Nhập</arg>
@@ -145,41 +145,58 @@
 <arg>${btnNavigate}</arg>
 <arg>${navigatelogin}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 07:41:38.341" level="INFO">Sending key(s) ('Đăng Nhập',) to //*[@id="vnt-header"]/div[1]/div[3]/div[2]/div[2]/div[1]/ul/li[1]/a element.</msg>
-<msg timestamp="20220426 07:41:39.441" level="INFO">Sending keys Đăng Nhập</msg>
-<status status="PASS" starttime="20220426 07:41:38.340" endtime="20220426 07:41:39.475"/>
+<msg timestamp="20220426 07:58:10.776" level="INFO">Sending key(s) ('Đăng Nhập',) to //*[@id="vnt-header"]/div[1]/div[3]/div[2]/div[2]/div[1]/ul/li[1]/a element.</msg>
+<msg timestamp="20220426 07:58:11.965" level="INFO">Sending keys Đăng Nhập</msg>
+<status status="PASS" starttime="20220426 07:58:10.775" endtime="20220426 07:58:11.997"/>
 </kw>
-<status status="PASS" starttime="20220426 07:41:38.340" endtime="20220426 07:41:39.476"/>
+<status status="PASS" starttime="20220426 07:58:10.774" endtime="20220426 07:58:11.997"/>
 </kw>
 <kw name="enter username" library="LoginPage">
 <arg>${usernamewrong}</arg>
-<msg timestamp="20220426 07:41:39.480" level="FAIL">Variable '${usernamewrong}' not found.</msg>
-<status status="FAIL" starttime="20220426 07:41:39.477" endtime="20220426 07:41:39.480"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220426 07:58:11.999" level="INFO">Typing text 'truongnguyendep@gmail.com' into text field '//*[@id="login_user"]'.</msg>
+<status status="PASS" starttime="20220426 07:58:11.998" endtime="20220426 07:58:12.319"/>
+</kw>
+<status status="PASS" starttime="20220426 07:58:11.998" endtime="20220426 07:58:12.319"/>
 </kw>
 <kw name="enter password" library="LoginPage">
 <arg>${passwordwrong}</arg>
-<status status="NOT RUN" starttime="20220426 07:41:39.481" endtime="20220426 07:41:39.481"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220426 07:58:12.321" level="INFO">Typing text 'Truong19062001' into text field '//*[@id="password"]'.</msg>
+<status status="PASS" starttime="20220426 07:58:12.320" endtime="20220426 07:58:12.507"/>
+</kw>
+<status status="PASS" starttime="20220426 07:58:12.319" endtime="20220426 07:58:12.507"/>
 </kw>
 <kw name="clickLoginButton" library="LoginPage">
 <arg>ĐĂNG NHẬP</arg>
-<status status="NOT RUN" starttime="20220426 07:41:39.482" endtime="20220426 07:41:39.482"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<arg>${logintext}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220426 07:58:12.509" level="INFO">Sending key(s) ('ĐĂNG NHẬP',) to //*[@id="frmLogin"]/div[4]/button element.</msg>
+<msg timestamp="20220426 07:58:13.984" level="INFO">Sending keys ĐĂNG NHẬP</msg>
+<status status="PASS" starttime="20220426 07:58:12.508" endtime="20220426 07:58:14.015"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220426 07:41:39.484" endtime="20220426 07:41:41.860"/>
+<status status="PASS" starttime="20220426 07:58:12.508" endtime="20220426 07:58:14.015"/>
 </kw>
-<status status="FAIL" starttime="20220426 07:41:32.593" endtime="20220426 07:41:41.862">Variable '${usernamewrong}' not found.</status>
+<status status="PASS" starttime="20220426 07:58:05.131" endtime="20220426 07:58:14.016"/>
 </test>
-<status status="FAIL" starttime="20220426 07:41:20.910" endtime="20220426 07:41:41.867"/>
+<status status="PASS" starttime="20220426 07:57:53.407" endtime="20220426 07:58:14.020"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="POM">POM</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="POM">POM</stat>
 </suite>
 </statistics>
 <errors>
