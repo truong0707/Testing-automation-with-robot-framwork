@@ -9,5 +9,5 @@ class DataTest:
             p.load(f, "utf-8")
         return p.get(dataKey).data
 
-print(DataTest.get_data_test_by_data_key("username"))
-print(DataTest.get_data_test_by_data_key("password"))
+print(DataTest.get_data_test_by_data_key("usernamecorrect"))
+print(DataTest.get_data_test_by_data_key("passwordcorrect"))

@@ -34,24 +34,25 @@ Library   ../Library/DataTest.py
 
 *** Test Cases ***
 Login with wrong password
-   ${username}=  get_data_test_by_data_key  username
-   ${password}=  get_data_test_by_data_key  password
+   ${username}=  get_data_test_by_data_key  usernamecorrect
+   ${password}=  get_data_test_by_data_key  passwordcorrect
+   ${usernamewrong}=  get_data_test_by_data_key  usernamewrong
+   ${passwordwrong}=  get_data_test_by_data_key  passwordwrong
    open page
    open tab user        user
    navigateLoginPage    Đăng Nhập
    enter username       ${username}
    enter password       ${password}
-#   verify Error text
-
-
-#   click button         Đăng nhập
-#   close trình duyệt
+   clickLoginButton     ĐĂNG NHẬP
+   verify Error text
+   [Teardown]   close browser
 #   [Teardown]  : có nghĩa là cho dù pass hay không pass thì vẫn đóng trình duyệt
-#   [Teardown]  close browser
 
-#Login with not exists username
-#   open page
-#   enter username       truongga123@gmail.com
-#   enter password       truong19062001
-#   click button         Đăng nhập
-##   [Teardown]  close browser
+Logged in successfully
+   open page
+   open tab user        user
+   navigateLoginPage    Đăng Nhập
+   enter username       ${usernamewrong}
+   enter password       ${passwordwrong}
+   clickLoginButton     ĐĂNG NHẬP
+   [Teardown]  close browser

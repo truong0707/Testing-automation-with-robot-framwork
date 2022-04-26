@@ -47,32 +47,27 @@ ${txtPassword}  //*[@id="password"]
 ${btnLogin}     //*[@id="frmLogin"]/div[4]/button
 ${btnOpenTabUser}  css=span.icon1
 ${btnNavigate}    //*[@id="vnt-header"]/div[1]/div[3]/div[2]/div[2]/div[1]/ul/li[1]/a
-${errortext}     css=div.alert-danger
+${errortext}     //*[@id="vnt-content"]/div/div/div[3]/div/div[1]
 
 *** Keywords ***
 open page
-    open browser  ${url}  Chrome
+    open browser     ${url}                 Chrome
     maximize browser window     # phóng to trình duyệt
 open tab user
-     [Arguments]  ${tabuser}
-     press keys   ${btnOpenTabUser}      ${tabuser}
+    [Arguments]      ${tabuser}
+    press keys       ${btnOpenTabUser}      ${tabuser}
 navigateLoginPage
-     [Arguments]  ${navigatelogin}
-     press keys   ${btnNavigate}         ${navigatelogin}
+    [Arguments]      ${navigatelogin}
+    press keys       ${btnNavigate}         ${navigatelogin}
 enter username
     # locater input + text mình muốn nhập
-    [Arguments]  ${username}
-    input text  ${txtUsername}     ${username}
+    [Arguments]      ${username}
+    input text       ${txtUsername}         ${username}
 enter password
-   [Arguments]  ${password}
-   input text  ${txtPassword}      ${password}
+    [Arguments]      ${password}
+    input text       ${txtPassword}         ${password}
 clickLoginButton
-   press keys  ${btnLogin}
-#verify Error text
-#   [Arguments]  ${errormsg}
-#   wait until element is visible  ${errortext}   ${errormsg}
-#verify Error text
-#   wait until element is visible  ${errortext}
-#click Login button
-#   # click button  css=button.auth-block__login-btn
-#   click button  ${btnLogin}
+    [Arguments]      ${logintext}
+    press keys       ${btnLogin}            ${logintext}
+verify Error text
+   wait until element is visible            ${errortext}
