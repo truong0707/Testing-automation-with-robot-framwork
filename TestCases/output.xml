@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220427 09:57:39.278" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220427 17:36:13.535" rpa="false" schemaversion="3">
 <suite id="s1" name="POM" source="C:\Users\TechCare\PycharmProjects\testing\TestCases\OrderPageTest__POM.robot">
 <test id="s1-t1" name="Search Product" line="7">
 <kw name="open page" library="OrderPage">
@@ -7,230 +7,239 @@
 <arg>${url}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220427 09:57:39.853" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
-<status status="PASS" starttime="20220427 09:57:39.852" endtime="20220427 09:57:48.303"/>
+<msg timestamp="20220427 17:36:14.487" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
+<status status="PASS" starttime="20220427 17:36:14.487" endtime="20220427 17:36:21.526"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220427 09:57:48.303" endtime="20220427 09:57:48.446"/>
+<status status="PASS" starttime="20220427 17:36:21.526" endtime="20220427 17:36:21.868"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:39.852" endtime="20220427 09:57:48.446"/>
+<status status="PASS" starttime="20220427 17:36:14.486" endtime="20220427 17:36:21.868"/>
 </kw>
 <kw name="scrollScreenPage" library="OrderPage">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>${scrolllegth}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220427 09:57:48.452" level="INFO">Executing JavaScript:
+<msg timestamp="20220427 17:36:21.888" level="INFO">Executing JavaScript:
 window.scrollTo(0, 300)
 Without any arguments.</msg>
-<status status="PASS" starttime="20220427 09:57:48.450" endtime="20220427 09:57:48.520"/>
+<status status="PASS" starttime="20220427 17:36:21.886" endtime="20220427 17:36:22.025"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:48.448" endtime="20220427 09:57:48.521"/>
+<status status="PASS" starttime="20220427 17:36:21.886" endtime="20220427 17:36:22.027"/>
 </kw>
 <kw name="delayScreen" library="OrderPage">
 <arg>2s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220427 09:57:50.531" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220427 09:57:48.523" endtime="20220427 09:57:50.531"/>
+<msg timestamp="20220427 17:36:24.051" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220427 17:36:22.036" endtime="20220427 17:36:24.051"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:48.522" endtime="20220427 09:57:50.532"/>
+<status status="PASS" starttime="20220427 17:36:22.034" endtime="20220427 17:36:24.052"/>
 </kw>
 <kw name="scrolltoProduct" library="OrderPage">
 <arg>//*[@id="vnt-content"]/div[2]/div/div[4]/div</arg>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${standingplace}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220427 09:57:50.535" endtime="20220427 09:57:50.897"/>
+<status status="PASS" starttime="20220427 17:36:24.053" endtime="20220427 17:36:24.405"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:50.533" endtime="20220427 09:57:50.897"/>
+<status status="PASS" starttime="20220427 17:36:24.052" endtime="20220427 17:36:24.405"/>
 </kw>
 <kw name="delayScreen" library="OrderPage">
 <arg>1s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220427 09:57:51.902" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220427 09:57:50.898" endtime="20220427 09:57:51.902"/>
+<msg timestamp="20220427 17:36:25.424" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220427 17:36:24.417" endtime="20220427 17:36:25.424"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:50.898" endtime="20220427 09:57:51.902"/>
+<status status="PASS" starttime="20220427 17:36:24.416" endtime="20220427 17:36:25.424"/>
 </kw>
 <kw name="scrolltoProduct" library="OrderPage">
 <arg>//*[@id="vnt-content"]/div[3]/div</arg>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${standingplace}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220427 09:57:51.903" endtime="20220427 09:57:52.204"/>
+<status status="PASS" starttime="20220427 17:36:25.426" endtime="20220427 17:36:25.836"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:51.903" endtime="20220427 09:57:52.205"/>
+<status status="PASS" starttime="20220427 17:36:25.425" endtime="20220427 17:36:25.837"/>
 </kw>
 <kw name="delayScreen" library="OrderPage">
 <arg>1s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220427 09:57:53.211" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220427 09:57:52.206" endtime="20220427 09:57:53.211"/>
+<msg timestamp="20220427 17:36:26.847" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220427 17:36:25.839" endtime="20220427 17:36:26.848"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:52.205" endtime="20220427 09:57:53.212"/>
+<status status="PASS" starttime="20220427 17:36:25.837" endtime="20220427 17:36:26.849"/>
 </kw>
 <kw name="scrolltoProduct" library="OrderPage">
 <arg>//*[@id="vnt-content"]/div[2]/div/div[2]/div/div</arg>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${standingplace}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20220427 09:57:53.213" endtime="20220427 09:57:53.529"/>
+<status status="PASS" starttime="20220427 17:36:26.850" endtime="20220427 17:36:27.166"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:53.212" endtime="20220427 09:57:53.529"/>
+<status status="PASS" starttime="20220427 17:36:26.849" endtime="20220427 17:36:27.166"/>
 </kw>
 <kw name="delayScreen" library="OrderPage">
 <arg>1s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220427 09:57:54.532" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220427 09:57:53.530" endtime="20220427 09:57:54.532"/>
+<msg timestamp="20220427 17:36:28.175" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220427 17:36:27.167" endtime="20220427 17:36:28.175"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:53.530" endtime="20220427 09:57:54.532"/>
+<status status="PASS" starttime="20220427 17:36:27.167" endtime="20220427 17:36:28.180"/>
+</kw>
+<kw name="scrolltoProduct" library="OrderPage">
+<arg>//*[@id="vnt-content"]/div[2]/div/div[3]/div</arg>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${standingplace}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220427 17:36:28.183" endtime="20220427 17:36:28.533"/>
+</kw>
+<status status="PASS" starttime="20220427 17:36:28.181" endtime="20220427 17:36:28.534"/>
 </kw>
 <kw name="clickDetailProduct" library="OrderPage">
-<arg>//*[@id="vnt-content"]/div[2]/div/div[2]/div/div/div/div[2]/div/div[1]/a</arg>
+<arg>//*[@id="vnt-content"]/div[2]/div/div[3]/div/div/div/div[1]/div/div[1]</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${detailproduct}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220427 09:57:54.534" level="INFO">Clicking element '//*[@id="vnt-content"]/div[2]/div/div[2]/div/div/div/div[2]/div/div[1]/a'.</msg>
-<status status="PASS" starttime="20220427 09:57:54.534" endtime="20220427 09:57:56.256"/>
+<msg timestamp="20220427 17:36:28.538" level="INFO">Clicking element '//*[@id="vnt-content"]/div[2]/div/div[3]/div/div/div/div[1]/div/div[1]'.</msg>
+<status status="PASS" starttime="20220427 17:36:28.537" endtime="20220427 17:36:31.687"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:54.533" endtime="20220427 09:57:56.256"/>
+<status status="PASS" starttime="20220427 17:36:28.535" endtime="20220427 17:36:31.688"/>
 </kw>
 <kw name="delayScreen" library="OrderPage">
 <arg>1s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220427 09:57:57.264" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220427 09:57:56.258" endtime="20220427 09:57:57.264"/>
+<msg timestamp="20220427 17:36:32.694" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220427 17:36:31.690" endtime="20220427 17:36:32.694"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:56.257" endtime="20220427 09:57:57.264"/>
+<status status="PASS" starttime="20220427 17:36:31.689" endtime="20220427 17:36:32.695"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:39.850" endtime="20220427 09:57:57.265"/>
+<status status="PASS" starttime="20220427 17:36:14.485" endtime="20220427 17:36:32.698"/>
 </test>
-<test id="s1-t2" name="Filter Product" line="19">
+<test id="s1-t2" name="Filter Product" line="20">
 <kw name="clickbtnFilterProduct" library="OrderPage">
 <arg>//*[@id="filter-size"]/div[1]</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnfilterproduct}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220427 09:57:57.268" level="INFO">Clicking element '//*[@id="filter-size"]/div[1]'.</msg>
-<status status="PASS" starttime="20220427 09:57:57.268" endtime="20220427 09:57:57.356"/>
+<msg timestamp="20220427 17:36:32.706" level="INFO">Clicking element '//*[@id="filter-size"]/div[1]'.</msg>
+<status status="PASS" starttime="20220427 17:36:32.705" endtime="20220427 17:36:32.884"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:57.268" endtime="20220427 09:57:57.356"/>
+<status status="PASS" starttime="20220427 17:36:32.702" endtime="20220427 17:36:32.884"/>
 </kw>
 <kw name="delayScreen" library="OrderPage">
 <arg>1s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220427 09:57:58.371" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220427 09:57:57.359" endtime="20220427 09:57:58.371"/>
+<msg timestamp="20220427 17:36:33.889" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220427 17:36:32.886" endtime="20220427 17:36:33.889"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:57.357" endtime="20220427 09:57:58.371"/>
+<status status="PASS" starttime="20220427 17:36:32.885" endtime="20220427 17:36:33.889"/>
 </kw>
 <kw name="clickbtnFilterProduct" library="OrderPage">
 <arg>//*[@id="filter-size"]/div[2]/div/div[3]</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnfilterproduct}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220427 09:57:58.373" level="INFO">Clicking element '//*[@id="filter-size"]/div[2]/div/div[3]'.</msg>
-<status status="PASS" starttime="20220427 09:57:58.373" endtime="20220427 09:57:59.773"/>
+<msg timestamp="20220427 17:36:33.891" level="INFO">Clicking element '//*[@id="filter-size"]/div[2]/div/div[3]'.</msg>
+<status status="PASS" starttime="20220427 17:36:33.891" endtime="20220427 17:36:35.866"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:58.372" endtime="20220427 09:57:59.773"/>
+<status status="PASS" starttime="20220427 17:36:33.890" endtime="20220427 17:36:35.867"/>
 </kw>
 <kw name="clickbtnFilterProduct" library="OrderPage">
 <arg>//*[@id="filter-color"]/div[1]</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnfilterproduct}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220427 09:57:59.778" level="INFO">Clicking element '//*[@id="filter-color"]/div[1]'.</msg>
-<status status="PASS" starttime="20220427 09:57:59.776" endtime="20220427 09:57:59.887"/>
+<msg timestamp="20220427 17:36:35.869" level="INFO">Clicking element '//*[@id="filter-color"]/div[1]'.</msg>
+<status status="PASS" starttime="20220427 17:36:35.868" endtime="20220427 17:36:36.005"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:59.773" endtime="20220427 09:57:59.887"/>
+<status status="PASS" starttime="20220427 17:36:35.868" endtime="20220427 17:36:36.006"/>
 </kw>
 <kw name="scrollScreenPage" library="OrderPage">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>${scrolllegth}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220427 09:57:59.889" level="INFO">Executing JavaScript:
+<msg timestamp="20220427 17:36:36.021" level="INFO">Executing JavaScript:
 window.scrollTo(0, 300)
 Without any arguments.</msg>
-<status status="PASS" starttime="20220427 09:57:59.888" endtime="20220427 09:57:59.900"/>
+<status status="PASS" starttime="20220427 17:36:36.020" endtime="20220427 17:36:36.038"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:59.888" endtime="20220427 09:57:59.900"/>
+<status status="PASS" starttime="20220427 17:36:36.019" endtime="20220427 17:36:36.038"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:57.267" endtime="20220427 09:57:59.901"/>
+<status status="PASS" starttime="20220427 17:36:32.701" endtime="20220427 17:36:36.039"/>
 </test>
-<test id="s1-t3" name="addToCard" line="25">
+<test id="s1-t3" name="addToCard" line="26">
 <kw name="clickDetailProduct" library="OrderPage">
 <arg>//*[@id="gripItemproduct"]/div[1]/div/div[1]</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${detailproduct}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220427 09:57:59.905" level="INFO">Clicking element '//*[@id="gripItemproduct"]/div[1]/div/div[1]'.</msg>
-<status status="PASS" starttime="20220427 09:57:59.904" endtime="20220427 09:58:01.718"/>
+<msg timestamp="20220427 17:36:36.049" level="INFO">Clicking element '//*[@id="gripItemproduct"]/div[1]/div/div[1]'.</msg>
+<status status="PASS" starttime="20220427 17:36:36.048" endtime="20220427 17:36:43.415"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:59.904" endtime="20220427 09:58:01.718"/>
+<status status="PASS" starttime="20220427 17:36:36.047" endtime="20220427 17:36:43.416"/>
 </kw>
 <kw name="scrollScreenPage" library="OrderPage">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>${scrolllegth}</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20220427 09:58:01.721" level="INFO">Executing JavaScript:
+<msg timestamp="20220427 17:36:43.419" level="INFO">Executing JavaScript:
 window.scrollTo(0, 300)
 Without any arguments.</msg>
-<status status="PASS" starttime="20220427 09:58:01.720" endtime="20220427 09:58:01.729"/>
+<status status="PASS" starttime="20220427 17:36:43.418" endtime="20220427 17:36:43.426"/>
 </kw>
-<status status="PASS" starttime="20220427 09:58:01.719" endtime="20220427 09:58:01.730"/>
+<status status="PASS" starttime="20220427 17:36:43.417" endtime="20220427 17:36:43.428"/>
 </kw>
 <kw name="clickbtnFilterProduct" library="OrderPage">
 <arg>//*[@id="proDetail"]/div[3]/div[1]/div/div[1]</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnfilterproduct}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220427 09:58:01.732" level="INFO">Clicking element '//*[@id="proDetail"]/div[3]/div[1]/div/div[1]'.</msg>
-<status status="PASS" starttime="20220427 09:58:01.731" endtime="20220427 09:58:01.882"/>
+<msg timestamp="20220427 17:36:43.432" level="INFO">Clicking element '//*[@id="proDetail"]/div[3]/div[1]/div/div[1]'.</msg>
+<status status="PASS" starttime="20220427 17:36:43.432" endtime="20220427 17:36:43.683"/>
 </kw>
-<status status="PASS" starttime="20220427 09:58:01.730" endtime="20220427 09:58:01.882"/>
+<status status="PASS" starttime="20220427 17:36:43.431" endtime="20220427 17:36:43.683"/>
 </kw>
 <kw name="delayScreen" library="OrderPage">
 <arg>1s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220427 09:58:02.897" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20220427 09:58:01.884" endtime="20220427 09:58:02.897"/>
+<msg timestamp="20220427 17:36:44.694" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220427 17:36:43.685" endtime="20220427 17:36:44.694"/>
 </kw>
-<status status="PASS" starttime="20220427 09:58:01.883" endtime="20220427 09:58:02.897"/>
+<status status="PASS" starttime="20220427 17:36:43.684" endtime="20220427 17:36:44.695"/>
 </kw>
 <kw name="clickbtnFilterProduct" library="OrderPage">
 <arg>//*[@id="proDetail"]/div[3]/div[1]/div/div[2]/ul/li[2]</arg>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${btnfilterproduct}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220427 09:58:02.899" level="INFO">Clicking element '//*[@id="proDetail"]/div[3]/div[1]/div/div[2]/ul/li[2]'.</msg>
-<status status="PASS" starttime="20220427 09:58:02.899" endtime="20220427 09:58:03.244"/>
+<msg timestamp="20220427 17:36:44.698" level="INFO">Clicking element '//*[@id="proDetail"]/div[3]/div[1]/div/div[2]/ul/li[2]'.</msg>
+<status status="PASS" starttime="20220427 17:36:44.697" endtime="20220427 17:36:44.841"/>
 </kw>
-<status status="PASS" starttime="20220427 09:58:02.898" endtime="20220427 09:58:03.245"/>
+<status status="PASS" starttime="20220427 17:36:44.696" endtime="20220427 17:36:44.842"/>
 </kw>
 <kw name="delayScreen" library="OrderPage">
 <arg>4s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220427 09:58:07.264" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20220427 09:58:03.249" endtime="20220427 09:58:07.265"/>
+<msg timestamp="20220427 17:36:48.852" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220427 17:36:44.847" endtime="20220427 17:36:48.852"/>
 </kw>
-<status status="PASS" starttime="20220427 09:58:03.247" endtime="20220427 09:58:07.265"/>
+<status status="PASS" starttime="20220427 17:36:44.846" endtime="20220427 17:36:48.852"/>
 </kw>
 <kw name="clickButton" library="OrderPage">
 <arg>ĐẶT MUA NGAY</arg>
@@ -238,19 +247,19 @@ Without any arguments.</msg>
 <arg>${buttonBuy}</arg>
 <arg>${txtbtnbuy}</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220427 09:58:07.269" level="INFO">Sending key(s) ('ĐẶT MUA NGAY',) to //*[@id="btnAddCart"] element.</msg>
-<msg timestamp="20220427 09:58:07.887" level="INFO">Sending keys ĐẶT MUA NGAY</msg>
-<status status="PASS" starttime="20220427 09:58:07.268" endtime="20220427 09:58:08.018"/>
+<msg timestamp="20220427 17:36:48.856" level="INFO">Sending key(s) ('ĐẶT MUA NGAY',) to //*[@id="btnAddCart"] element.</msg>
+<msg timestamp="20220427 17:36:49.399" level="INFO">Sending keys ĐẶT MUA NGAY</msg>
+<status status="PASS" starttime="20220427 17:36:48.854" endtime="20220427 17:36:49.456"/>
 </kw>
-<status status="PASS" starttime="20220427 09:58:07.266" endtime="20220427 09:58:08.018"/>
+<status status="PASS" starttime="20220427 17:36:48.853" endtime="20220427 17:36:49.457"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220427 09:58:08.020" endtime="20220427 09:58:10.440"/>
+<status status="PASS" starttime="20220427 17:36:49.461" endtime="20220427 17:36:52.046"/>
 </kw>
-<status status="PASS" starttime="20220427 09:57:59.903" endtime="20220427 09:58:10.441"/>
+<status status="PASS" starttime="20220427 17:36:36.043" endtime="20220427 17:36:52.047"/>
 </test>
-<status status="PASS" starttime="20220427 09:57:39.286" endtime="20220427 09:58:10.446"/>
+<status status="PASS" starttime="20220427 17:36:13.541" endtime="20220427 17:36:52.051"/>
 </suite>
 <statistics>
 <total>

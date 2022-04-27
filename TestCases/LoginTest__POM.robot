@@ -8,16 +8,16 @@ Login with wrong password
    ${username}=  get_data_test_by_data_key  usernamecorrect
    ${password}=  get_data_test_by_data_key  passwordcorrect
    open page
-   delayScreen          3s
+   delayScreen          2s
    open tab user        user
    navigateLoginPage    Đăng Nhập
    enter username       ${username}
    enter password       ${password}
    checkbox
-   delayScreen          6s
+   delayScreen          3s
    clickLoginButton     ĐĂNG NHẬP
    verify Error text
-   delayScreen          4s
+   delayScreen          3s
    [Teardown]   close browser
 #   [Teardown]  : có nghĩa là cho dù pass hay không pass thì vẫn đóng trình duyệt
 
@@ -33,4 +33,4 @@ Logged in successfully
    checkbox
    delayScreen          6s
    clickLoginButton     ĐĂNG NHẬP
-#   [Teardown]  close browser
+   [Teardown]  close browser

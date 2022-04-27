@@ -14,7 +14,8 @@ Search Product
    delayScreen             1s
    scrolltoProduct         //*[@id="vnt-content"]/div[2]/div/div[2]/div/div
    delayScreen             1s
-   clickDetailProduct     //*[@id="vnt-content"]/div[2]/div/div[2]/div/div/div/div[2]/div/div[1]/a
+   scrolltoProduct         //*[@id="vnt-content"]/div[2]/div/div[3]/div
+   clickDetailProduct      //*[@id="vnt-content"]/div[2]/div/div[3]/div/div/div/div[1]/div/div[1]
    delayScreen             1s
 Filter Product
    clickbtnFilterProduct   //*[@id="filter-size"]/div[1]

@@ -1,14 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220427 09:57:21.483" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220427 17:37:44.374" rpa="false" schemaversion="3">
 <suite id="s1" name="TestCases" source="C:\Users\TechCare\PycharmProjects\testing\TestCases">
-<suite id="s1-s1" name="LoginTest" source="C:\Users\TechCare\PycharmProjects\testing\TestCases\LoginTest.robot">
-<test id="s1-s1-t1" name="OpenWebsite" line="8">
+<suite id="s1-s1" name="POM" source="C:\Users\TechCare\PycharmProjects\testing\TestCases\LoginTest__POM.robot">
+<test id="s1-s1-t1" name="Login with wrong password" line="7">
+<kw name="get_data_test_by_data_key">
+<var>${username}</var>
+<arg>usernamecorrect</arg>
+<msg timestamp="20220427 17:37:45.033" level="FAIL">No keyword with name 'get_data_test_by_data_key' found.</msg>
+<status status="FAIL" starttime="20220427 17:37:45.032" endtime="20220427 17:37:45.033"/>
+</kw>
+<kw name="get_data_test_by_data_key">
+<var>${password}</var>
+<arg>passwordcorrect</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.045" endtime="20220427 17:37:45.045"/>
+</kw>
+<kw name="open page" library="LoginPage">
+<status status="NOT RUN" starttime="20220427 17:37:45.046" endtime="20220427 17:37:45.046"/>
+</kw>
+<kw name="delayScreen" library="LoginPage">
+<arg>2s</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.047" endtime="20220427 17:37:45.047"/>
+</kw>
+<kw name="open tab user" library="LoginPage">
+<arg>user</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.047" endtime="20220427 17:37:45.047"/>
+</kw>
+<kw name="navigateLoginPage" library="LoginPage">
+<arg>Đăng Nhập</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.048" endtime="20220427 17:37:45.048"/>
+</kw>
+<kw name="enter username" library="LoginPage">
+<arg>${username}</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.049" endtime="20220427 17:37:45.049"/>
+</kw>
+<kw name="enter password" library="LoginPage">
+<arg>${password}</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.050" endtime="20220427 17:37:45.050"/>
+</kw>
+<kw name="checkbox" library="LoginPage">
+<status status="NOT RUN" starttime="20220427 17:37:45.050" endtime="20220427 17:37:45.050"/>
+</kw>
+<kw name="delayScreen" library="LoginPage">
+<arg>3s</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.051" endtime="20220427 17:37:45.052"/>
+</kw>
+<kw name="clickLoginButton" library="LoginPage">
+<arg>ĐĂNG NHẬP</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.052" endtime="20220427 17:37:45.053"/>
+</kw>
+<kw name="verify Error text" library="LoginPage">
+<status status="NOT RUN" starttime="20220427 17:37:45.057" endtime="20220427 17:37:45.057"/>
+</kw>
+<kw name="delayScreen" library="LoginPage">
+<arg>3s</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.058" endtime="20220427 17:37:45.058"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220427 17:37:45.058" endtime="20220427 17:37:45.059"/>
+</kw>
+<status status="FAIL" starttime="20220427 17:37:45.017" endtime="20220427 17:37:45.060">No keyword with name 'get_data_test_by_data_key' found.</status>
+</test>
+<test id="s1-s1-t2" name="Logged in successfully" line="24">
+<kw name="get_data_test_by_data_key">
+<var>${usernamewrong}</var>
+<arg>usernamewrong</arg>
+<msg timestamp="20220427 17:37:45.068" level="FAIL">No keyword with name 'get_data_test_by_data_key' found.</msg>
+<status status="FAIL" starttime="20220427 17:37:45.068" endtime="20220427 17:37:45.068"/>
+</kw>
+<kw name="get_data_test_by_data_key">
+<var>${passwordwrong}</var>
+<arg>passwordwrong</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.078" endtime="20220427 17:37:45.078"/>
+</kw>
+<kw name="open page" library="LoginPage">
+<status status="NOT RUN" starttime="20220427 17:37:45.078" endtime="20220427 17:37:45.078"/>
+</kw>
+<kw name="delayScreen" library="LoginPage">
+<arg>3s</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.079" endtime="20220427 17:37:45.079"/>
+</kw>
+<kw name="open tab user" library="LoginPage">
+<arg>user</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.080" endtime="20220427 17:37:45.080"/>
+</kw>
+<kw name="navigateLoginPage" library="LoginPage">
+<arg>Đăng Nhập</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.081" endtime="20220427 17:37:45.081"/>
+</kw>
+<kw name="enter username" library="LoginPage">
+<arg>${usernamewrong}</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.081" endtime="20220427 17:37:45.081"/>
+</kw>
+<kw name="enter password" library="LoginPage">
+<arg>${passwordwrong}</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.082" endtime="20220427 17:37:45.082"/>
+</kw>
+<kw name="checkbox" library="LoginPage">
+<status status="NOT RUN" starttime="20220427 17:37:45.083" endtime="20220427 17:37:45.083"/>
+</kw>
+<kw name="delayScreen" library="LoginPage">
+<arg>6s</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.084" endtime="20220427 17:37:45.084"/>
+</kw>
+<kw name="clickLoginButton" library="LoginPage">
+<arg>ĐĂNG NHẬP</arg>
+<status status="NOT RUN" starttime="20220427 17:37:45.085" endtime="20220427 17:37:45.085"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220427 17:37:45.086" endtime="20220427 17:37:45.086"/>
+</kw>
+<status status="FAIL" starttime="20220427 17:37:45.062" endtime="20220427 17:37:45.090">No keyword with name 'get_data_test_by_data_key' found.</status>
+</test>
+<status status="FAIL" starttime="20220427 17:37:44.430" endtime="20220427 17:37:45.092"/>
+</suite>
+<suite id="s1-s2" name="POM" source="C:\Users\TechCare\PycharmProjects\testing\TestCases\OrderPageTest__POM.robot">
+<test id="s1-s2-t1" name="Search Product" line="7">
+<kw name="open page" library="OrderPage">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${host}</arg>
+<arg>${url}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220427 09:57:22.088" level="INFO">Opening browser 'Chrome' to base url 'https://fado.vn/dang-nhap/'.</msg>
+<msg timestamp="20220427 17:37:45.119" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
+<status status="PASS" starttime="20220427 17:37:45.118" endtime="20220427 17:37:51.795"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220427 17:37:51.795" endtime="20220427 17:37:52.338"/>
+</kw>
+<status status="PASS" starttime="20220427 17:37:45.117" endtime="20220427 17:37:52.338"/>
+</kw>
+<kw name="scrollScreenPage" library="OrderPage">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>${scrolllegth}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220427 17:37:52.348" level="INFO">Executing JavaScript:
+window.scrollTo(0, 300)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220427 17:37:52.346" endtime="20220427 17:37:52.500"/>
+</kw>
+<status status="PASS" starttime="20220427 17:37:52.345" endtime="20220427 17:37:52.500"/>
+</kw>
+<kw name="delayScreen" library="OrderPage">
+<arg>2s</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>${second}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220427 17:37:54.525" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220427 17:37:52.510" endtime="20220427 17:37:54.525"/>
+</kw>
+<status status="PASS" starttime="20220427 17:37:52.510" endtime="20220427 17:37:54.526"/>
+</kw>
+<kw name="scrolltoProduct" library="OrderPage">
+<arg>//*[@id="vnt-content"]/div[2]/div/div[4]/div</arg>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${standingplace}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
 <errors>
-<msg timestamp="20220427 09:57:25.096" level="ERROR">Execution stopped by user.</msg>
+<msg timestamp="20220427 17:37:45.013" level="ERROR">Error in file 'C:\Users\TechCare\PycharmProjects\testing\TestCases\LoginTest__POM.robot' on line 3: Importing library 'C:\Users\TechCare\PycharmProjects\testing\Library\DataTest.py' failed: FileNotFoundError: [Errno 2] No such file or directory: '../Resources/Profile.properties'
+Traceback (most recent call last):
+  File "C:\Users\TechCare\PycharmProjects\testing\Library\DataTest.py", line 12, in &lt;module&gt;
+    print(DataTest.get_data_test_by_data_key("usernamecorrect"))
+  File "C:\Users\TechCare\PycharmProjects\testing\Library\DataTest.py", line 8, in get_data_test_by_data_key
+    with open("../Resources/Profile.properties", 'rb') as f:
+PYTHONPATH:
+  C:\Users\TechCare\PycharmProjects\testing\Library
+  C:\Users\TechCare\PycharmProjects\testing\venv\Scripts\robot.exe
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39
+  C:\Users\TechCare\PycharmProjects\testing\venv
+  C:\Users\TechCare\PycharmProjects\testing\venv\lib\site-packages</msg>
+<msg timestamp="20220427 17:37:45.094" level="WARN">Multiple suites with name 'POM' executed in suite 'TestCases'.</msg>
+<msg timestamp="20220427 17:37:45.111" level="ERROR">Error in file 'C:\Users\TechCare\PycharmProjects\testing\TestCases\OrderPageTest__POM.robot' on line 3: Importing library 'C:\Users\TechCare\PycharmProjects\testing\Library\DataTest.py' failed: FileNotFoundError: [Errno 2] No such file or directory: '../Resources/Profile.properties'
+Traceback (most recent call last):
+  File "C:\Users\TechCare\PycharmProjects\testing\Library\DataTest.py", line 12, in &lt;module&gt;
+    print(DataTest.get_data_test_by_data_key("usernamecorrect"))
+  File "C:\Users\TechCare\PycharmProjects\testing\Library\DataTest.py", line 8, in get_data_test_by_data_key
+    with open("../Resources/Profile.properties", 'rb') as f:
+PYTHONPATH:
+  C:\Users\TechCare\PycharmProjects\testing\Library
+  C:\Users\TechCare\PycharmProjects\testing\venv\Scripts\robot.exe
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39\python39.zip
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39\DLLs
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39\lib
+  C:\Users\TechCare\AppData\Local\Programs\Python\Python39
+  C:\Users\TechCare\PycharmProjects\testing\venv
+  C:\Users\TechCare\PycharmProjects\testing\venv\lib\site-packages</msg>
+<msg timestamp="20220427 17:37:59.450" level="ERROR">Execution stopped by user.</msg>
 </errors>
 </robot>
