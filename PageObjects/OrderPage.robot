@@ -6,7 +6,7 @@ Library  SeleniumLibrary
 ${url}             https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE
 ${btnLogin}        //*[@id="frmLogin"]/div[4]/button
 ${btnOpenTabUser}  css=span.icon1
-${scrolllegth}     window.scrollTo(0, 300)
+${scrolllegth}     window.scrollTo(0, 200)
 ${buttonBuy}       //*[@id="btnAddCart"]
 *** Keywords ***
 open page

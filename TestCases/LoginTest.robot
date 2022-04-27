@@ -30,16 +30,16 @@
 ##  locater input + text mình muốn nhập
 #   input text  css=input#auth-block__form-group__email   truongga123@gmail.com
 #   input text  css=input[data-test-login-password]       truong19062001
-##   click button  css=button.auth-block__login-btn
-#   press keys  css=button.auth-block__login-btn          ENTER
-##   phép chờ
-#   wait until element is visible  css=div.-alert-danger
-##   lấy text trên cái alert đó
-#   element text should be  css=div.-alert-danger         Có lỗi xảy ra:\n- Tài khoản không tồn tại, vui lòng kiểm tra lại
-#   [Teardown]  close browser
-#
-#*** Keywords ***
-#
-#
-#
-#
+ ###   click button  css=button.auth-block__login-btn
+ ##   press keys  css=button.auth-block__login-btn          ENTER
+ ###   phép chờ
+ ##   wait until element is visible  css=div.-alert-danger
+ ###   lấy text trên cái alert đó
+ ##   element text should be  css=div.-alert-danger         Có lỗi xảy ra:\n- Tài khoản không tồn tại, vui lòng kiểm tra lại
+ ##   [Teardown]  close browser
+ ##
+ ##*** Keywords ***
+ ##
+ ##
+ ##
+ ##

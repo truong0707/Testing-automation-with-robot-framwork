@@ -13,9 +13,8 @@ Search Product
    scrolltoProduct         //*[@id="vnt-content"]/div[3]/div
    delayScreen             1s
    scrolltoProduct         //*[@id="vnt-content"]/div[2]/div/div[2]/div/div
-   delayScreen             1s
-   scrolltoProduct         //*[@id="vnt-content"]/div[2]/div/div[3]/div
-   clickDetailProduct      //*[@id="vnt-content"]/div[2]/div/div[3]/div/div/div/div[1]/div/div[1]
+   delayScreen             2s
+   clickDetailProduct      //*[@id="vnt-content"]/div[2]/div/div[2]/div/div/div/div[1]
    delayScreen             1s
 Filter Product
    clickbtnFilterProduct   //*[@id="filter-size"]/div[1]
@@ -23,7 +22,7 @@ Filter Product
    clickbtnFilterProduct   //*[@id="filter-size"]/div[2]/div/div[3]
    clickbtnFilterProduct   //*[@id="filter-color"]/div[1]
    scrollscreenpage
-addToCard
+addToCart
    clickDetailProduct      //*[@id="gripItemproduct"]/div[1]/div/div[1]
    scrollScreenPage
    clickbtnFilterProduct   //*[@id="proDetail"]/div[3]/div[1]/div/div[1]
