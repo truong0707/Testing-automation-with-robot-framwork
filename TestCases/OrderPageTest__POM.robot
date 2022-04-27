@@ -30,4 +30,4 @@ addToCard
    clickbtnFilterProduct   //*[@id="proDetail"]/div[3]/div[1]/div/div[2]/ul/li[2]
    delayScreen             4s
    clickButton             ĐẶT MUA NGAY
-#   [Teardown]    close browser
+   [Teardown]    close browser

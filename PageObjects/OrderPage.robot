@@ -10,26 +10,23 @@ ${scrolllegth}     window.scrollTo(0, 300)
 ${buttonBuy}       //*[@id="btnAddCart"]
 *** Keywords ***
 open page
-    open browser     ${url}                 Chrome
+    open browser               ${url}                 Chrome
     maximize browser window     # phóng to trình duyệt
 delayScreen
-    [Arguments]      ${second}
-    Sleep            ${second}
+    [Arguments]                ${second}
+    Sleep                      ${second}
 scrolltoProduct
     [Arguments]                ${standingplace}
     scroll element into view   ${standingplace}
 scrollScreenPage
     Execute JavaScript         ${scrolllegth}
 clickDetailProduct
-    [Arguments]      ${detailproduct}
-    click element    ${detailproduct}
+    [Arguments]                ${detailproduct}
+    click element              ${detailproduct}
 clickbtnFilterProduct
-    [Arguments]      ${btnfilterproduct}
-    click element    ${btnfilterproduct}
+    [Arguments]                ${btnfilterproduct}
+    click element              ${btnfilterproduct}
 clickButton
-    [Arguments]      ${txtbtnbuy}
-    press keys       ${buttonBuy}         ${txtbtnbuy}
-#clickCarosel
-#    [Arguments]      ${btn-next-prev}
-#    click element    ${btn-next-prev}
+    [Arguments]                ${txtbtnbuy}
+    press keys                 ${buttonBuy}         ${txtbtnbuy}
 

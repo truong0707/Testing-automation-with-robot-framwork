@@ -15,30 +15,30 @@ ${checkbox}        //*[@id="ch_remember"]
 
 *** Keywords ***
 open page
-    open browser     ${url}                 Chrome
+    open browser                    ${url}                 Chrome
     maximize browser window     # phóng to trình duyệt
 delayScreen
-    [Arguments]      ${second}
-    Sleep            ${second}
+    [Arguments]                     ${second}
+    Sleep                           ${second}
 open tab user
-    [Arguments]      ${tabuser}
-    press keys       ${btnOpenTabUser}      ${tabuser}
+    [Arguments]                     ${tabuser}
+    press keys                      ${btnOpenTabUser}      ${tabuser}
 navigateLoginPage
-    [Arguments]      ${navigatelogin}
-    press keys       ${btnNavigate}         ${navigatelogin}
+    [Arguments]                     ${navigatelogin}
+    press keys                      ${btnNavigate}         ${navigatelogin}
 enter username
     # locater input + text mình muốn nhập
-    [Arguments]      ${username}
-    input text       ${txtUsername}         ${username}
+    [Arguments]                     ${username}
+    input text                      ${txtUsername}         ${username}
 enter password
-    [Arguments]      ${password}
-    input text       ${txtPassword}         ${password}
+    [Arguments]                     ${password}
+    input text                      ${txtPassword}         ${password}
 checkbox
     Page Should Contain Checkbox    ${checkbox}
     select checkbox                 ${checkbox}
     checkbox should be selected     ${checkbox}
 clickLoginButton
-    [Arguments]      ${logintext}
-    press keys       ${btnLogin}            ${logintext}
+    [Arguments]                     ${logintext}
+    press keys                      ${btnLogin}            ${logintext}
 verify Error text
-   wait until element is visible            ${errortext}
+   wait until element is visible    ${errortext}
