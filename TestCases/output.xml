@@ -1,253 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220426 17:21:40.533" rpa="false" schemaversion="3">
-<suite id="s1" name="POM" source="C:\Users\TechCare\PycharmProjects\testing\TestCases\LoginTest__POM.robot">
-<test id="s1-t1" name="Login with wrong password" line="7">
-<kw name="Get Data Test By Data Key" library="DataTest">
-<var>${username}</var>
-<arg>usernamecorrect</arg>
-<msg timestamp="20220426 17:21:41.105" level="INFO">${username} = truongnguyendep@gmail.com</msg>
-<status status="PASS" starttime="20220426 17:21:41.103" endtime="20220426 17:21:41.105"/>
-</kw>
-<kw name="Get Data Test By Data Key" library="DataTest">
-<var>${password}</var>
-<arg>passwordcorrect</arg>
-<msg timestamp="20220426 17:21:41.108" level="INFO">${password} = 123456</msg>
-<status status="PASS" starttime="20220426 17:21:41.106" endtime="20220426 17:21:41.108"/>
-</kw>
-<kw name="open page" library="LoginPage">
+<robot generator="Robot 5.0 (Python 3.9.6 on win32)" generated="20220427 08:22:42.285" rpa="false" schemaversion="3">
+<suite id="s1" name="POM" source="C:\Users\TechCare\PycharmProjects\testing\TestCases\OrderPageTest__POM.robot">
+<test id="s1-t1" name="Order Product" line="7">
+<kw name="open page" library="OrderPage">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220426 17:21:41.111" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
-<status status="PASS" starttime="20220426 17:21:41.110" endtime="20220426 17:21:48.543"/>
+<msg timestamp="20220427 08:22:42.756" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
+<status status="PASS" starttime="20220427 08:22:42.755" endtime="20220427 08:22:48.040"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220426 17:21:48.543" endtime="20220426 17:21:48.810"/>
+<status status="PASS" starttime="20220427 08:22:48.041" endtime="20220427 08:22:48.179"/>
 </kw>
-<status status="PASS" starttime="20220426 17:21:41.109" endtime="20220426 17:21:48.811"/>
+<status status="PASS" starttime="20220427 08:22:42.755" endtime="20220427 08:22:48.180"/>
 </kw>
-<kw name="delayScreen" library="LoginPage">
-<arg>3s</arg>
+<kw name="delayScreen" library="OrderPage">
+<arg>2s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220426 17:21:51.826" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220426 17:21:48.815" endtime="20220426 17:21:51.826"/>
+<msg timestamp="20220427 08:22:50.199" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220427 08:22:48.184" endtime="20220427 08:22:50.200"/>
 </kw>
-<status status="PASS" starttime="20220426 17:21:48.815" endtime="20220426 17:21:51.826"/>
+<status status="PASS" starttime="20220427 08:22:48.183" endtime="20220427 08:22:50.200"/>
 </kw>
-<kw name="open tab user" library="LoginPage">
-<arg>user</arg>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${btnOpenTabUser}</arg>
-<arg>${tabuser}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 17:21:51.836" level="INFO">Sending key(s) ('user',) to css=span.icon1 element.</msg>
-<msg timestamp="20220426 17:21:52.218" level="INFO">Sending keys user</msg>
-<status status="PASS" starttime="20220426 17:21:51.834" endtime="20220426 17:21:52.276"/>
+<kw name="scrollScreen" library="OrderPage">
+<arg>//*[@id="vnt-content"]/div[2]/div/div[4]/div</arg>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${standingplace}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220427 08:22:50.203" endtime="20220427 08:22:50.532"/>
 </kw>
-<status status="PASS" starttime="20220426 17:21:51.832" endtime="20220426 17:21:52.276"/>
+<status status="PASS" starttime="20220427 08:22:50.201" endtime="20220427 08:22:50.532"/>
 </kw>
-<kw name="navigateLoginPage" library="LoginPage">
-<arg>Đăng Nhập</arg>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${btnNavigate}</arg>
-<arg>${navigatelogin}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 17:21:52.288" level="INFO">Sending key(s) ('Đăng Nhập',) to //*[@id="vnt-header"]/div[1]/div[3]/div[2]/div[2]/div[1]/ul/li[1]/a element.</msg>
-<msg timestamp="20220426 17:21:54.225" level="INFO">Sending keys Đăng Nhập</msg>
-<status status="PASS" starttime="20220426 17:21:52.287" endtime="20220426 17:21:54.276"/>
-</kw>
-<status status="PASS" starttime="20220426 17:21:52.286" endtime="20220426 17:21:54.277"/>
-</kw>
-<kw name="enter username" library="LoginPage">
-<arg>${username}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txtUsername}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220426 17:21:54.283" level="INFO">Typing text 'truongnguyendep@gmail.com' into text field '//*[@id="login_user"]'.</msg>
-<status status="PASS" starttime="20220426 17:21:54.281" endtime="20220426 17:21:54.924"/>
-</kw>
-<status status="PASS" starttime="20220426 17:21:54.278" endtime="20220426 17:21:54.924"/>
-</kw>
-<kw name="enter password" library="LoginPage">
-<arg>${password}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txtPassword}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220426 17:21:54.926" level="INFO">Typing text '123456' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220426 17:21:54.926" endtime="20220426 17:21:55.239"/>
-</kw>
-<status status="PASS" starttime="20220426 17:21:54.925" endtime="20220426 17:21:55.240"/>
-</kw>
-<kw name="checkbox" library="LoginPage">
-<kw name="Page Should Contain Checkbox" library="SeleniumLibrary">
-<arg>${checkbox}</arg>
-<doc>Verifies checkbox ``locator`` is found from the current page.</doc>
-<msg timestamp="20220426 17:21:55.385" level="INFO">Current page contains checkbox '//*[@id="ch_remember"]'.</msg>
-<status status="PASS" starttime="20220426 17:21:55.242" endtime="20220426 17:21:55.386"/>
-</kw>
-<kw name="Select Checkbox" library="SeleniumLibrary">
-<arg>${checkbox}</arg>
-<doc>Selects the checkbox identified by ``locator``.</doc>
-<msg timestamp="20220426 17:21:55.386" level="INFO">Selecting checkbox '//*[@id="ch_remember"]'.</msg>
-<status status="PASS" starttime="20220426 17:21:55.386" endtime="20220426 17:21:55.620"/>
-</kw>
-<kw name="Checkbox Should Be Selected" library="SeleniumLibrary">
-<arg>${checkbox}</arg>
-<doc>Verifies checkbox ``locator`` is selected/checked.</doc>
-<msg timestamp="20220426 17:21:55.621" level="INFO">Verifying checkbox '//*[@id="ch_remember"]' is selected.</msg>
-<status status="PASS" starttime="20220426 17:21:55.621" endtime="20220426 17:21:55.738"/>
-</kw>
-<status status="PASS" starttime="20220426 17:21:55.241" endtime="20220426 17:21:55.739"/>
-</kw>
-<kw name="delayScreen" library="LoginPage">
-<arg>10s</arg>
+<kw name="delayScreen" library="OrderPage">
+<arg>2s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220426 17:22:05.747" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20220426 17:21:55.741" endtime="20220426 17:22:05.747"/>
+<msg timestamp="20220427 08:22:52.539" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220427 08:22:50.534" endtime="20220427 08:22:52.539"/>
 </kw>
-<status status="PASS" starttime="20220426 17:21:55.740" endtime="20220426 17:22:05.748"/>
+<status status="PASS" starttime="20220427 08:22:50.533" endtime="20220427 08:22:52.539"/>
 </kw>
-<kw name="clickLoginButton" library="LoginPage">
-<arg>ĐĂNG NHẬP</arg>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${btnLogin}</arg>
-<arg>${logintext}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 17:22:05.750" level="INFO">Sending key(s) ('ĐĂNG NHẬP',) to //*[@id="frmLogin"]/div[4]/button element.</msg>
-<msg timestamp="20220426 17:22:07.180" level="INFO">Sending keys ĐĂNG NHẬP</msg>
-<status status="PASS" starttime="20220426 17:22:05.749" endtime="20220426 17:22:07.215"/>
+<kw name="scrollScreen" library="OrderPage">
+<arg>//*[@id="vnt-content"]/div[3]/div</arg>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${standingplace}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220427 08:22:52.541" endtime="20220427 08:22:52.855"/>
 </kw>
-<status status="PASS" starttime="20220426 17:22:05.748" endtime="20220426 17:22:07.215"/>
+<status status="PASS" starttime="20220427 08:22:52.540" endtime="20220427 08:22:52.856"/>
 </kw>
-<kw name="verify Error text" library="LoginPage">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${errortext}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220426 17:22:07.216" endtime="20220426 17:22:07.275"/>
-</kw>
-<status status="PASS" starttime="20220426 17:22:07.216" endtime="20220426 17:22:07.276"/>
-</kw>
-<kw name="delayScreen" library="LoginPage">
-<arg>4s</arg>
+<kw name="delayScreen" library="OrderPage">
+<arg>2s</arg>
 <kw name="Sleep" library="BuiltIn">
 <arg>${second}</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220426 17:22:11.290" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20220426 17:22:07.284" endtime="20220426 17:22:11.290"/>
+<msg timestamp="20220427 08:22:54.870" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220427 08:22:52.857" endtime="20220427 08:22:54.870"/>
 </kw>
-<status status="PASS" starttime="20220426 17:22:07.282" endtime="20220426 17:22:11.290"/>
+<status status="PASS" starttime="20220427 08:22:52.856" endtime="20220427 08:22:54.870"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220426 17:22:11.291" endtime="20220426 17:22:14.360"/>
+<kw name="scrollScreen" library="OrderPage">
+<arg>//*[@id="vnt-content"]/div[2]/div/div[2]/div/div</arg>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${standingplace}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20220427 08:22:54.872" endtime="20220427 08:22:55.171"/>
 </kw>
-<status status="PASS" starttime="20220426 17:21:41.100" endtime="20220426 17:22:14.361"/>
+<status status="PASS" starttime="20220427 08:22:54.871" endtime="20220427 08:22:55.171"/>
+</kw>
+<kw name="delayScreen" library="OrderPage">
+<arg>2s</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>${second}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220427 08:22:57.178" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220427 08:22:55.173" endtime="20220427 08:22:57.178"/>
+</kw>
+<status status="PASS" starttime="20220427 08:22:55.172" endtime="20220427 08:22:57.178"/>
+</kw>
+<kw name="clickDetailProduct" library="OrderPage">
+<arg>//*[@id="vnt-content"]/div[2]/div/div[2]/div/div/div/div[2]/div/div[1]/a</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${detailproduct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220427 08:22:57.181" level="INFO">Clicking element '//*[@id="vnt-content"]/div[2]/div/div[2]/div/div/div/div[2]/div/div[1]/a'.</msg>
+<status status="PASS" starttime="20220427 08:22:57.181" endtime="20220427 08:22:59.332"/>
+</kw>
+<status status="PASS" starttime="20220427 08:22:57.180" endtime="20220427 08:22:59.333"/>
+</kw>
+<kw name="delayScreen" library="OrderPage">
+<arg>2s</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>${second}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220427 08:23:01.350" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220427 08:22:59.335" endtime="20220427 08:23:01.350"/>
+</kw>
+<status status="PASS" starttime="20220427 08:22:59.334" endtime="20220427 08:23:01.350"/>
+</kw>
+<kw name="clickCarosel" library="OrderPage">
+<arg>//*[@id="vnt-content"]/div[2]/div/div[1]/div/div[2]/div/button[2]</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn-next-prev}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220427 08:23:01.352" level="INFO">Clicking element '//*[@id="vnt-content"]/div[2]/div/div[1]/div/div[2]/div/button[2]'.</msg>
+<msg timestamp="20220427 08:23:01.678" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220427 08:23:01.681" level="FAIL">Element with locator '//*[@id="vnt-content"]/div[2]/div/div[1]/div/div[2]/div/button[2]' not found.</msg>
+<status status="FAIL" starttime="20220427 08:23:01.351" endtime="20220427 08:23:01.757"/>
+</kw>
+<status status="FAIL" starttime="20220427 08:23:01.351" endtime="20220427 08:23:01.758"/>
+</kw>
+<kw name="clickCarosel" library="OrderPage">
+<arg>//*[@id="vnt-content"]/div[2]/div/div[1]/div/div[2]/div/button[2]</arg>
+<status status="NOT RUN" starttime="20220427 08:23:01.759" endtime="20220427 08:23:01.759"/>
+</kw>
+<status status="FAIL" starttime="20220427 08:22:42.753" endtime="20220427 08:23:01.761">Element with locator '//*[@id="vnt-content"]/div[2]/div/div[1]/div/div[2]/div/button[2]' not found.</status>
 </test>
-<test id="s1-t2" name="Logged in successfully" line="24">
-<kw name="Get Data Test By Data Key" library="DataTest">
-<var>${usernamewrong}</var>
-<arg>usernamewrong</arg>
-<msg timestamp="20220426 17:22:14.366" level="INFO">${usernamewrong} = truongnguyendep@gmail.com</msg>
-<status status="PASS" starttime="20220426 17:22:14.365" endtime="20220426 17:22:14.366"/>
-</kw>
-<kw name="Get Data Test By Data Key" library="DataTest">
-<var>${passwordwrong}</var>
-<arg>passwordwrong</arg>
-<msg timestamp="20220426 17:22:14.368" level="INFO">${passwordwrong} = Truong19062001</msg>
-<status status="PASS" starttime="20220426 17:22:14.367" endtime="20220426 17:22:14.368"/>
-</kw>
-<kw name="open page" library="LoginPage">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${url}</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220426 17:22:14.370" level="INFO">Opening browser 'Chrome' to base url 'https://oldsailor.com.vn/nam.html?gclid=EAIaIQobChMIo93wt8Cd9wIV3plmAh38Egm7EAAYAiAAEgKGpvD_BwE'.</msg>
-<status status="PASS" starttime="20220426 17:22:14.369" endtime="20220426 17:22:21.419"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220426 17:22:21.420" endtime="20220426 17:22:21.838"/>
-</kw>
-<status status="PASS" starttime="20220426 17:22:14.369" endtime="20220426 17:22:21.839"/>
-</kw>
-<kw name="open tab user" library="LoginPage">
-<arg>user</arg>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${btnOpenTabUser}</arg>
-<arg>${tabuser}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 17:22:21.867" level="INFO">Sending key(s) ('user',) to css=span.icon1 element.</msg>
-<msg timestamp="20220426 17:22:22.322" level="INFO">Sending keys user</msg>
-<status status="PASS" starttime="20220426 17:22:21.863" endtime="20220426 17:22:22.355"/>
-</kw>
-<status status="PASS" starttime="20220426 17:22:21.860" endtime="20220426 17:22:22.356"/>
-</kw>
-<kw name="navigateLoginPage" library="LoginPage">
-<arg>Đăng Nhập</arg>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${btnNavigate}</arg>
-<arg>${navigatelogin}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 17:22:22.358" level="INFO">Sending key(s) ('Đăng Nhập',) to //*[@id="vnt-header"]/div[1]/div[3]/div[2]/div[2]/div[1]/ul/li[1]/a element.</msg>
-<msg timestamp="20220426 17:22:23.887" level="INFO">Sending keys Đăng Nhập</msg>
-<status status="PASS" starttime="20220426 17:22:22.357" endtime="20220426 17:22:24.060"/>
-</kw>
-<status status="PASS" starttime="20220426 17:22:22.356" endtime="20220426 17:22:24.062"/>
-</kw>
-<kw name="enter username" library="LoginPage">
-<arg>${usernamewrong}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txtUsername}</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220426 17:22:24.066" level="INFO">Typing text 'truongnguyendep@gmail.com' into text field '//*[@id="login_user"]'.</msg>
-<status status="PASS" starttime="20220426 17:22:24.065" endtime="20220426 17:22:24.434"/>
-</kw>
-<status status="PASS" starttime="20220426 17:22:24.064" endtime="20220426 17:22:24.434"/>
-</kw>
-<kw name="enter password" library="LoginPage">
-<arg>${passwordwrong}</arg>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${txtPassword}</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220426 17:22:24.436" level="INFO">Typing text 'Truong19062001' into text field '//*[@id="password"]'.</msg>
-<status status="PASS" starttime="20220426 17:22:24.436" endtime="20220426 17:22:24.732"/>
-</kw>
-<status status="PASS" starttime="20220426 17:22:24.435" endtime="20220426 17:22:24.732"/>
-</kw>
-<kw name="clickLoginButton" library="LoginPage">
-<arg>ĐĂNG NHẬP</arg>
-<kw name="Press Keys" library="SeleniumLibrary">
-<arg>${btnLogin}</arg>
-<arg>${logintext}</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<msg timestamp="20220426 17:22:24.734" level="INFO">Sending key(s) ('ĐĂNG NHẬP',) to //*[@id="frmLogin"]/div[4]/button element.</msg>
-<msg timestamp="20220426 17:22:26.547" level="INFO">Sending keys ĐĂNG NHẬP</msg>
-<status status="PASS" starttime="20220426 17:22:24.734" endtime="20220426 17:22:26.585"/>
-</kw>
-<status status="PASS" starttime="20220426 17:22:24.733" endtime="20220426 17:22:26.586"/>
-</kw>
-<status status="PASS" starttime="20220426 17:22:14.363" endtime="20220426 17:22:26.587"/>
-</test>
-<status status="PASS" starttime="20220426 17:21:40.537" endtime="20220426 17:22:26.590"/>
+<status status="FAIL" starttime="20220427 08:22:42.288" endtime="20220427 08:23:01.765"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="POM">POM</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="POM">POM</stat>
 </suite>
 </statistics>
 <errors>
